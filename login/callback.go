@@ -10,12 +10,11 @@ import (
 	"net"
 	"net/http"
 	"net/url"
-	"os/exec"
-	"runtime"
 	"strings"
 	"sync"
 
 	"github.com/bwplotka/oidc"
+	"github.com/pkg/browser"
 )
 
 const (
@@ -36,22 +35,7 @@ func rand128Bits() string {
 
 // open opens the specified URL in the default browser of the user.
 func openBrowser(url string) error {
-	var cmd string
-	var args []string
-
-	switch runtime.GOOS {
-	case "windows":
-		cmd = "cmd"
-		args = []string{"/c", "start"}
-		// If we don't escape &, cmd will ignore everything after the first &.
-		url = strings.Replace(url, "&", "^&", -1)
-	case "darwin":
-		cmd = "open"
-	default: // "linux", "freebsd", "openbsd", "netbsd"
-		cmd = "xdg-open"
-	}
-	args = append(args, url)
-	return exec.Command(cmd, args...).Start()
+	return browser.OpenURL(url)
 }
 
 // callbackResponse contains return message from callback server including token or error.

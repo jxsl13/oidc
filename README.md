@@ -1,6 +1,6 @@
 # oidc
 [![Build Status](https://travis-ci.org/bwplotka/oidc.svg?branch=master)](https://travis-ci.org/bwplotka/oidc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/bwplotka/oidc)](https://goreportcard.com/report/github.com/bwplotka/oidc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jxsl13/oidc)](https://goreportcard.com/report/github.com/jxsl13/oidc)
 
 
 Golang Open ID Connect (OIDC) client library.
@@ -20,7 +20,7 @@ package main
 import (
     "context"
     
-    "github.com/bwplotka/oidc"
+    "github.com/jxsl13/oidc"
 )
 
 func main() {

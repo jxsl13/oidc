@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/bwplotka/oidc"
+	"github.com/jxsl13/oidc"
 )
 
 type Authorizer interface {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bwplotka/oidc"
-	"github.com/bwplotka/oidc/login"
+	"github.com/jxsl13/oidc"
+	"github.com/jxsl13/oidc/login"
 	cfg "k8s.io/client-go/tools/clientcmd"
 	api "k8s.io/client-go/tools/clientcmd/api"
 )

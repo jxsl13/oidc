@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/bwplotka/oidc"
-	"github.com/bwplotka/oidc/testing"
+	"github.com/jxsl13/oidc"
+	"github.com/jxsl13/oidc/testing"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

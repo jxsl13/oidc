@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/bwplotka/oidc"
+	"github.com/jxsl13/oidc"
 	"github.com/pkg/errors"
 )
 
@@ -49,7 +49,7 @@ func NewOIDCTokenSource(ctx context.Context, logger *log.Logger, googleServiceAc
 	}
 
 	s := &OIDCTokenSource{
-		logger: logger,
+		logger:                   logger,
 		googleServiceAccountJSON: googleServiceAccountJSON,
 		oidcClient:               oidcClient,
 		oidcConfig: oidc.Config{

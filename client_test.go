@@ -6,16 +6,17 @@ import (
 	"testing"
 	"time"
 
+	"context"
+
 	"github.com/bwplotka/go-httpt"
 	"github.com/bwplotka/go-httpt/rt"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"golang.org/x/net/context"
 )
 
 const (
 	exampleIssuer = "https://issuer.org"
-	zeroTime = 0 * time.Second
+	zeroTime      = 0 * time.Second
 )
 
 var testDiscovery = DiscoveryJSON{

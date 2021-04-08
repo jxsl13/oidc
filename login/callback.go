@@ -13,7 +13,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/bwplotka/oidc"
+	"github.com/jxsl13/oidc"
 	"github.com/pkg/browser"
 )
 

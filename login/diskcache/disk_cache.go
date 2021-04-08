@@ -7,8 +7,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/bwplotka/oidc"
-	"github.com/bwplotka/oidc/login"
+	"github.com/jxsl13/oidc"
+	"github.com/jxsl13/oidc/login"
 )
 
 // DefaultCachePath is default path for OIDC tokens.

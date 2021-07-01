@@ -78,7 +78,7 @@ func (c *Cache) SaveToken(token *oidc.Token) error {
 		return err
 	}
 
-	marshaledToken, err := json.Marshal(token)
+	marshaledToken, err := json.MarshalIndent(token, "", " ")
 	if err != nil {
 		return err
 	}

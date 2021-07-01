@@ -183,7 +183,7 @@ func parseCallbackRequest(form url.Values) (code string, state string, err error
 // OKCallbackResponse is package wide function variable that returns HTTP response on successful OIDC `code` flow.
 var OKCallbackResponse = func(w http.ResponseWriter, _ *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("OIDC authentication flow is completed. You can close browser tab."))
+	w.Write([]byte(DefaultOkCallbackHTML))
 }
 
 // ErrCallbackResponse is package wide function variable that returns HTTP response on failed OIDC `code` flow.
@@ -191,7 +191,7 @@ var OKCallbackResponse = func(w http.ResponseWriter, _ *http.Request) {
 // If it is required otherwise, override this function.
 var ErrCallbackResponse = func(w http.ResponseWriter, _ *http.Request, _ error) {
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("OIDC authentication flow is completed. You can close browser tab."))
+	w.Write([]byte(DefaultErrCallbackHTML))
 }
 
 func (s *CallbackServer) errRespond(w http.ResponseWriter, r *http.Request, err error) {
